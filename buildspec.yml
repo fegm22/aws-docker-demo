@@ -7,6 +7,9 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
+      - echo installing maven...
+      - apt-get update -y
+      - apt-get install -y maven
   build:
     commands:
       - echo Build started on `date`
