@@ -19,6 +19,7 @@ artifacts:
     - target/*.jar
     - scripts/*.sh
     - appspec.yml
+  discard-paths: yes
 cache:
   paths:
     - '/root/.m2/**/*'
