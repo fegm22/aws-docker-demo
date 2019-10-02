@@ -20,6 +20,6 @@ public class Handler {
         log.trace(request.toString());
         return ServerResponse.ok()
                 .contentType(APPLICATION_JSON)
-                .body(serviceIp.getIp(), String.class);
+                .body(serviceIp.getIp(), EC2Info.class);
     }
 }

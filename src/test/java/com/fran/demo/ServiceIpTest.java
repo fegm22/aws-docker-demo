@@ -1,6 +1,7 @@
 package com.fran.demo;
 
 
+import com.fran.demo.app.EC2Info;
 import com.fran.demo.app.ServiceIp;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -9,6 +10,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
+import software.amazon.awssdk.services.ec2.Ec2Client;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -28,7 +30,7 @@ public class ServiceIpTest {
         final String ip = InetAddress.getLocalHost().toString();
 
         //when
-        final Mono<String> response = serviceIp.getIp();
+        final Mono<EC2Info> response = serviceIp.getIp();
 
         //then
         StepVerifier
