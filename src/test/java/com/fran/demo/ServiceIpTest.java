@@ -2,6 +2,7 @@ package com.fran.demo;
 
 
 import com.fran.demo.app.ServiceIp;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -15,6 +16,7 @@ import java.net.UnknownHostException;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
+@Ignore
 public class ServiceIpTest {
 
     @InjectMocks
