@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<awssdk.version>2.9.11</awssdk.version>
 		<docker.image.prefix>garridomosqueira</docker.image.prefix>
 	</properties>
 
@@ -28,6 +29,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>ec2</artifactId>
+			<version>${awssdk.version}</version>
 		</dependency>
 
 		<dependency>
