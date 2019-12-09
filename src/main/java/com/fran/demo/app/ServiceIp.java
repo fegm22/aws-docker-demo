@@ -30,7 +30,7 @@ public class ServiceIp {
         log.info("Your current IP address : " + ip);
         log.info("Your current Hostname : " + hostname);
 
-        return Mono.just(EC2Info.builder().build());
+        return Mono.just(EC2Info.builder().ipAddress(ip.getHostAddress()).hostName(hostname).build());
 
     }
 }
