@@ -20,4 +20,5 @@ docker push garridomosqueira/awsdemo
 ###Run the image
 docker run -p 8080:8080 garridomosqueira/awsdemo
 
-
+##Run Netty in specific port 
+docker run -p 8080:8080 garridomosqueira/awsdemo --server.port=8080
